@@ -42,9 +42,9 @@ export default function Timetable() {
 
   return (
     <div className="min-h-screen bg-gray-100 flex flex-col items-center p-6">
-      <h1 className="text-3xl font-bold mb-4">Daily Timetable</h1>
+      <h1 className="text-4xl font-bold mb-16">Daily Timetable</h1>
       <select
-        className="mb-4 p-2 border rounded"
+        className="mb-4 p-2 border rounded-lg"
         value={selectedDay}
         onChange={(e) => setSelectedDay(e.target.value)}
       >
@@ -54,10 +54,10 @@ export default function Timetable() {
       </select>
       <div className="w-full max-w-md bg-white p-4 rounded-lg shadow-md">
         {timetables[selectedDay].map((task, index) => (
-          <div key={index} className="flex justify-between items-center mb-2">
+          <div key={index} className="flex justify-between items-center mb-2 gap-4">
             <input
               type="number"
-              className="border p-2 w-1/6 rounded"
+              className="border p-2 w-1/6 rounded "
               value={task.hh}
               placeholder="HH"
               onChange={(e) => {
@@ -68,7 +68,7 @@ export default function Timetable() {
             />
             <input
               type="number"
-              className="border p-2 w-1/6 rounded"
+              className="border p-2 w-1/6 rounded mr-2"
               value={task.mm}
               placeholder="MM"
               onChange={(e) => {
